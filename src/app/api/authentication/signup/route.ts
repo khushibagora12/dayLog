@@ -3,7 +3,7 @@ import User from "@/models/user";
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../../auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth"; 
 import  {getErrorMessage} from '@/lib/errorHandler'
 
 export async function POST(req:NextRequest) {

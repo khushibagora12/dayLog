@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import UserLog from "./db";
 import { ConnectDB } from "@/dbConnect/dbConnect";
 import { getServerSession } from "next-auth";
-import { authOptions } from "../auth/[...nextauth]/route";
+import { authOptions } from "@/lib/auth"; 
 import { getErrorMessage } from "@/lib/errorHandler";
 
 export async function POST(req: NextRequest) {
