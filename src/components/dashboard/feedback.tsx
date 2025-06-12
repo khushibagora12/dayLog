@@ -8,6 +8,7 @@ export default function FeedbackPage() {
     const [rating, setRating] = useState(0);
     const [feedback, setFeedback] = useState('')
     // const [idx, setIdx] = useState();
+    const [isSent, setIsSent] = useState(false);
     const ratingFunction = (idx: number) => {
         setRating(idx);
     }
@@ -17,6 +18,7 @@ export default function FeedbackPage() {
             toast("Empty fields")
             return;
         }
+        setIsSent(true);
         try {
             const data = {
                 rating : rating,
@@ -36,6 +38,7 @@ export default function FeedbackPage() {
                 setRating(0);
                 setFeedback('');
             }
+            setIsSent(false);
         } catch (error : unknown) {
             console.log(error)
         }
@@ -61,7 +64,7 @@ export default function FeedbackPage() {
                             setFeedback(e.target.value)
                         }}
                         />
-                        <button className="p-2 bg-[#6e29c3] active:bg-[#58209d] text-white font-bold w-[100%] rounded-2xl mt-2" onClick={feedbackHandler}>Submit feedback</button>
+                        <button className="p-2 bg-[#6e29c3] active:bg-[#58209d] text-white font-bold w-[100%] rounded-2xl mt-2" onClick={feedbackHandler}>{isSent === true?"Sending...":"Submit feedback"}</button>
                     </div>
                 </div>
             </div>

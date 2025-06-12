@@ -104,12 +104,12 @@ export default function Landing() {
                         stroke="#7516ac"
                         strokeWidth="0.15"
                         viewBox="0 0 24 24"
-                        className="absolute right-200 bottom-230 lg:right-342 lg:bottom-200"
+                        className="absolute right-342 bottom-230"
                     >
                         <path d="M12 2C12 7 7 12 2 12C7 12 12 17 12 22C12 17 17 12 22 12C17 12 12 7 12 2Z" />
                     </svg>
                 </div>
-                <div className="relative block md:hidden">
+                <div className="relative block sm:hidden">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="100"
@@ -118,7 +118,7 @@ export default function Landing() {
                         stroke="#7516ac"
                         strokeWidth="0.15"
                         viewBox="0 0 24 24"
-                        className="absolute right-80 bottom-50 sm:right-130 sm:bottom-30"
+                        className="absolute right-90 bottom-440"
                     >
                         <path d="M12 2C12 7 7 12 2 12C7 12 12 17 12 22C12 17 17 12 22 12C17 12 12 7 12 2Z" />
                     </svg>

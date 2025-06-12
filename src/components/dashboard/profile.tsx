@@ -51,10 +51,10 @@ export default function ProfilePage() {
     }
     return (
         <>
-            <div className="m-10 mt-5 w-full">
+            <div className="m-10 mt-5 overflow-x-hidden">
                 <h1 className={`${poppins.className} text-3xl text-[#421C86] font-bold`}>My Profile</h1>
-                <div className="flex gap-20 ">
-                    <div className="h-[300px] w-[400px] bg-[#f9f5fa] rounded-2xl p-8 border-1 border-gray-300 mt-10 gap-20">
+                <div className="lg:flex gap-20 ">
+                    <div className="h-[200px] w-[370px] sm:h-[300px] sm:w-[400px] bg-[#f9f5fa] rounded-2xl p-8 border-1 border-gray-300 mt-10 gap-20">
                         <div className={`flex bg-[#f2e4f6] p-2 rounded-2xl ${edit === true ? "hidden" : "flex"}`}>
                             <div className="text-lg font-bold text-[#311267]">Username : </div>
                             <div className="text-lg ml-2">{userdetails.username}</div>
@@ -66,13 +66,13 @@ export default function ProfilePage() {
                             }} />
                             <div className="ml-auto bg-[#c453e0] p-1 text-white font-bold rounded-xl active:bg-[#a240bb]"><button onClick={updateusername}>Confirm</button></div>
                         </div>
-                        <div className={`flex bg-[#f2e4f6] p-2 rounded-2xl mt-5`}>
-                            <div className="text-lg font-bold text-[#311267]">Email : </div>
-                            <div className="text-lg ml-2">{userdetails.email}</div>
+                        <div className={`flex flex-wrap bg-[#f2e4f6] p-2 rounded-2xl mt-5`}>
+                            <div className="text-lg font-bold text-[#311267]">Email: </div>
+                            <div className="text-lg ml-2 break-all">{userdetails.email}</div>
                         </div>
 
                     </div>
-                    <div className="h-[300px] w-[400px] bg-[#f9f5fa] rounded-2xl p-8 border-1 border-gray-300 mt-10">
+                    <div className="h-[200px] w-[370px] sm:h-[300px] sm:w-[400px] bg-[#f9f5fa] rounded-2xl p-8 border-1 border-gray-300 mt-10">
                         <h1 className="text-2xl font-bold">LogOut</h1>
                         <button className="w-full bg-red-500 p-2 mt-5 rounded-2xl text-white font-bold active:bg-red-600" onClick={() => {signOut({callbackUrl : '/login'})}}>Logout</button>
                     </div>

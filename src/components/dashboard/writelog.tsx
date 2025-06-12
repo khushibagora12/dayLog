@@ -8,6 +8,7 @@ export default function WriteLogPage() {
     const [title, setTitle] = useState('');
     const [image, setImage] = useState<File | null>(null);
     const [log, setLog] = useState('');
+    const [isSaving, setIsSaving] = useState(false);
 
     const logHandler = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -15,6 +16,7 @@ export default function WriteLogPage() {
             toast("Empty Fields");
             return;
         }
+        setIsSaving(true);
         const currdate = new Date();
         const today = currdate.getDate() + "/" + (currdate.getMonth() + 1) + "/" + currdate.getFullYear();
         try {
@@ -61,6 +63,7 @@ export default function WriteLogPage() {
             else{
                 toast("failed")
             }
+            setIsSaving(false)
         } catch (error: unknown) {
             console.log(error);
         }
@@ -91,7 +94,7 @@ export default function WriteLogPage() {
                             onChange={(e) => setLog(e.target.value)}
                         />
                     </div>
-                    <button type="submit" onClick={logHandler} className="p-2 bg-[#6e29c3] active:bg-[#58209d] text-white font-bold w-[100%] rounded-2xl mt-2">save</button>
+                    <button type="submit" onClick={logHandler} className="p-2 bg-[#6e29c3] active:bg-[#58209d] text-white font-bold w-[100%] rounded-2xl mt-2">{isSaving === true?"Saving...":"Save"}</button>
                 </div>
                 <div className="flex-row m-10 lg:m-0 lg:ml-20 rounded-3xl">
                 <Image src={'/journal.png'} alt="preview img" height={50} width={400} className=" shadow-[-10px_10px_30px_rgba(0,0,0,0.3)] rounded-3xl "/>
