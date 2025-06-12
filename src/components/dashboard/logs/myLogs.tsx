@@ -6,6 +6,13 @@ import Template from "./logTemplate";
 import { Calendar } from "@/components/ui/calendar"
 import React from "react";
 
+type Log = {
+    title : string,
+    log : string,
+    date : string,
+    image : string
+}
+
 export default function MyLogsPage() {
     const [logs, setLogs] = useState([]);
     const [date, setDate] = React.useState<Date | undefined>(
@@ -51,7 +58,7 @@ export default function MyLogsPage() {
                 <div className=" mt-10 grid lg:grid-cols-2 gap-20">
                     {
                         logs &&
-                        logs.map((log: any, idx: number) => (
+                        logs.map((log: Log, idx: number) => (
                             <div key={idx}>
                                 {log.date === formatted && <Template userData={log} />}
                             </div>
