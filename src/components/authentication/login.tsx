@@ -75,7 +75,7 @@ export default function Login() {
                             </div>
                             <button className="mt-5 w-60 p-2 text-white font-bold rounded-xl bg-gradient-to-r from-[#6e29c3] to-[#ceb4ee] active:from-[#6e29c3] hover:shadow-lg hover:ring-3 hover:ring-white hover:shadow-gray-400 active:to-[#6e29c3]" onClick={submitHandler}>{submit === true ? "submitting" : "SignIn"}</button>
                         </form>
-                        <div className={`mt-5 ${plexSerif.className} text-[#545454] text-sm`}>Don't have an account?<Link href={'/signup'} className="font-bold">SignUp</Link></div>
+                        <div className={`mt-5 ${plexSerif.className} text-[#545454] text-sm`}>{"Don't have an account?"}<Link href={'/signup'} className="font-bold">SignUp</Link></div>
                     </div>
                     <div className="hidden md:block mr-5 ml-auto">
                         <Image src={'/auth.jpg'} alt="loginImage" height={10} width={900} className="rounded-xl" />

@@ -8,7 +8,7 @@ export default function Features() {
                 <div className="flex h-[100%] justify-center items-center bg-gradient-to-br from-pink-50 via-pink-200 to-purple-400 rounded-2xl">
                     <div className="p-3 m-3 bg-purple-50 rounded-2xl border-1 border-purple-200">
                         <h2 className={`flex justify-center ${poppins.className} font-semibold text-center text-xl m-5`}>Simple & Minimal Journaling</h2>
-                        <div className={`${plexSerif.className} text-sm text-center`}>DayLog provides a clean, clutter-free space for you to write your thoughts, feelings, and daily experiences. The minimalist design helps you focus on expressing yourself without distractions. Whether you're jotting down a quick reflection or pouring your heart out, DayLog makes it easy and calming to build a consistent journaling habit.</div>
+                        <div className={`${plexSerif.className} text-sm text-center`}>{"DayLog provides a clean, clutter-free space for you to write your thoughts, feelings, and daily experiences. The minimalist design helps you focus on expressing yourself without distractions. Whether you're jotting down a quick reflection or pouring your heart out, DayLog makes it easy and calming to build a consistent journaling habit."}</div>
                     </div>
                 </div>
                 <div className="flex h-[100%] justify-center items-center bg-gradient-to-br from-pink-50 via-pink-200 to-purple-400 rounded-2xl">

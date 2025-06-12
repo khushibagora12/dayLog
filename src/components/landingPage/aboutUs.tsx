@@ -9,7 +9,7 @@ export default function Aboutus() {
             <div className="sm:flex justify-center">
                 <div className="flex justify-center w-[100%] md:w-[60%] lg:w-[20%]">
                     {/* <div className=""> */}
-                    <div className={`${plexSerif.className} text-[#2a1352] w-[100%] p-5 m-2 text-sm`}>At DayLog, we believe that your thoughts, emotions, and experiences deserve a safe, personal space. Whether you're celebrating small victories, processing tough days, or simply reflecting on life's journey, DayLog is here to support you.</div>
+                    <div className={`${plexSerif.className} text-[#2a1352] w-[100%] p-5 m-2 text-sm`}>{"At DayLog, we believe that your thoughts, emotions, and experiences deserve a safe, personal space. Whether you're celebrating small victories, processing tough days, or simply reflecting on life's journey, DayLog is here to support you."}</div>
                     {/* </div> */}
                 </div>
                 <div className="hidden sm:flex">
@@ -22,7 +22,7 @@ export default function Aboutus() {
                     <div><Image src={'/journal.png'} alt="demo" height={100} width={200} className=" m-5 rounded-xl" /></div>
                     <div className="w-[100%] m-5">
                         <h1 className={`${cinzel.className} text-[#3e1d78] text-xl font-semibold ml-7`}>Why DayLog ?</h1>
-                        <div className={`${plexSerif.className} text-[#2a1352] p-2 lg:p-5 m-2 `}>We're more than just a digital journal - we're your daily companion for mindful living, self-expression, and emotional well-being. Built with privacy at its core, DayLog ensures that your entries remain truly yours. No judgment. No noise. Just you and your words.</div>
+                        <div className={`${plexSerif.className} text-[#2a1352] p-2 lg:p-5 m-2 `}>{"We're more than just a digital journal - we're your daily companion for mindful living, self-expression, and emotional well-being. Built with privacy at its core, DayLog ensures that your entries remain truly yours. No judgment. No noise. Just you and your words."}</div>
                     </div>
                 </div>
             </div>

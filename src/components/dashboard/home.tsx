@@ -46,7 +46,7 @@ export default function Homepage() {
                     <h1 className={`${poppins.className} text-4xl text-[#421C86] font-medium`}>Welcome {username}</h1>
                     <div className="sm:flex gap-x-10">
                         <div className=" bg-[#f9f5fa] rounded-2xl p-8 border-1 border-gray-300 mt-10">
-                            <h1 className=" text-2xl font-semibold">Today's Log</h1>
+                            <h1 className=" text-2xl font-semibold">{"Today's Log"}</h1>
                             <p className={`${plexSerif.className} text-[#3c2564] mt-2`}>Your journal is waiting for your thoughts. <br /> Start writing now!</p>
                             <button className="text-white p-3 w-40 bg-[#7543cb] active:bg-[#642fbf] hover:ring-white hover:ring-1 hover:shadow-gray-500 hover:shadow-lg font-bold rounded-2xl mt-5"><Link href={'/dashboard/writeLog'}>Start Journaling</Link></button>
                         </div>
