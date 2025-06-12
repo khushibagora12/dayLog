@@ -27,7 +27,7 @@ const authOptions: NextAuthOptions = {
                         return null;
                     }
                     //match the password now
-                    const compare = await bcrypt.compare(user.password, credentials!.password);
+                    const compare = await bcrypt.compare(credentials!.password, user.password);
                     if (!compare) {
                         console.log("password doesn't match")
                         return null;

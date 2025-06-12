@@ -2,6 +2,8 @@ import { ConnectDB } from "@/dbConnect/dbConnect";
 import User from "@/models/user";
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
+import { getServerSession } from "next-auth";
+import { authOptions } from "../../auth/[...nextauth]/route";
 
 export async function POST(req:NextRequest) {
     try {
@@ -30,4 +32,35 @@ export async function POST(req:NextRequest) {
         return NextResponse.json({error : error.message || "something went wrong"}, {status : 500});
     }
     
+}
+export async function GET(req : NextRequest) {
+    const session = await getServerSession(authOptions);
+    if(!session || !session?.user.id){
+        return NextResponse.json("unauthorized");
+    }
+    try {
+        await ConnectDB();
+        const user = await User.findById(session?.user.id);
+        console.log("user: ", user);
+        return NextResponse.json(user);
+    } 
+    catch (error : any) {
+        return NextResponse.json({error: error.message || "something went wrong"}, {status : 500})
+    }
+}
+
+export async function PUT(req : NextRequest) {
+    try {
+        const session = await getServerSession(authOptions);
+        if(!session || !session?.user.id){
+        return NextResponse.json("unauthorized");
+    }
+        await ConnectDB();
+        const body = await req.json();
+        const update = await User.findByIdAndUpdate(session?.user.id, {username : body.username})
+        console.log(update);
+        return NextResponse.json(update);
+    } catch (error : any) {
+        return NextResponse.json({error : error.message})
+    }
 }

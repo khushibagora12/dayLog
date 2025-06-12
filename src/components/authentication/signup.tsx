@@ -16,11 +16,11 @@ export default function Signup() {
     })
     const router = useRouter();
     async function submitHandler(e: React.FormEvent) {
+        e.preventDefault();
         if(signupData.username === '' || signupData.email === '' || signupData.password === ''){
                     toast("All fields are required")
                     return;
                 }
-        e.preventDefault();
         setSubmit(true);
         try {
             const res = await fetch('/api/authentication/signup', {
@@ -37,6 +37,7 @@ export default function Signup() {
                 setsignupData({ ...signupData, username: '', email: '', password: '' })
                 router.push('/login');
             }
+            setSubmit(false);
 
         } catch (error: any) {
             console.log(error);

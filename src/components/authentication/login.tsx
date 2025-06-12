@@ -16,11 +16,11 @@ export default function Login() {
     })
     const router = useRouter();
     async function submitHandler(e: React.FormEvent) {
+        e.preventDefault();
         if(loginData.email === '' || loginData.password === ''){
             toast("All fields are required")
             return;
         }
-        e.preventDefault();
         setSubmit(true);
         try {
             const res = await signIn("credentials", {
@@ -31,11 +31,14 @@ export default function Login() {
             if (!res?.ok) {
                 console.log("sign in failed")
                 toast("invalid credentials")
+                setSubmit(false);
+                setLoginData({...loginData, email : '', password : ''})
                 return;
             }
             if (res.ok) {
                 console.log("successfully signed in")
                 toast("Signed In successfully");
+                setLoginData({...loginData, email : '', password : ''})
                 router.replace("/dashboard");
             }
         } catch (error) {

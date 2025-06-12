@@ -1,5 +1,7 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 .bg-linear {
   background: linear-gradient(135deg, #fbecec 0%, #c686e1 40%, #5e4499 70%, #542d9c 100%);
 }
+
