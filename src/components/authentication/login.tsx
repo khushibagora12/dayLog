@@ -41,7 +41,7 @@ export default function Login() {
                 setLoginData({...loginData, email : '', password : ''})
                 router.replace("/dashboard");
             }
-        } catch (error) {
+        } catch (error : unknown) {
             console.log(error)
         }
     }

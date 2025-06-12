@@ -23,7 +23,7 @@ export default function MyLogsPage() {
                 console.log("get userLog", response.userLog);
                 setLogs(response.userLog)
 
-            } catch (error: any) {
+            } catch (error: unknown) {
                 console.log(error);
             }
         }

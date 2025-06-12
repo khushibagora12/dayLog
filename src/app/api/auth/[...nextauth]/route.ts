@@ -38,7 +38,7 @@ const authOptions: NextAuthOptions = {
                         email: user.email
                     };
 
-                } catch (error : any) {
+                } catch (error : unknown) {
                     console.log(error);
                     return null;
                 }

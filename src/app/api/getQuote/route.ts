@@ -1,3 +1,4 @@
+import { getErrorMessage } from "@/lib/errorHandler";
 import { NextResponse } from "next/server";
 
 export async function GET() {
@@ -13,7 +14,7 @@ export async function GET() {
         }
         const data = await res.json();
         return NextResponse.json(data);
-    } catch (error : any) {
-        return NextResponse.json({error : error.message})
+    } catch (error : unknown) {
+        return NextResponse.json({error : getErrorMessage(error)})
     }
 }

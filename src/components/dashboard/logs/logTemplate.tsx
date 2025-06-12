@@ -9,7 +9,14 @@ import {
 import { niconne, shantel } from "@/components/ui/fonts"
 import Image from "next/image"
 
-export default function Template({userData} : any) {
+type UserData = {
+    title : string,
+    log : string,
+    date : string,
+    image : string
+}
+
+export default function Template({userData} : { userData: UserData }) {
     // console.log("template: ", userData);
     // console.log("template: ", userData.title);
 

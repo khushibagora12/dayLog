@@ -1,6 +1,7 @@
 import { NextRequest } from 'next/server';
 import { EmailTemplate } from '@/components/email/feedback-template'; 
 import { Resend } from 'resend';
+import { getErrorMessage } from '@/lib/errorHandler';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -22,8 +23,8 @@ export async function POST(req : NextRequest) {
     }
     console.log("no error")
     return Response.json(data);
-  } catch (error) {
+  } catch (error : unknown) {
     console.log("error in feedback: ", error)
-    return Response.json({ error }, { status: 500 });
+    return Response.json({ error : getErrorMessage(error) }, { status: 500 });
   }
 }

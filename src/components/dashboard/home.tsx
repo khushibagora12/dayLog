@@ -15,7 +15,7 @@ export default function Homepage() {
                 });
                 const user = await res.json();
                 setUsername(user.username);
-            } catch (error: any) {
+            } catch (error: unknown) {
                 console.log(error);
             }
         }
@@ -32,7 +32,7 @@ export default function Homepage() {
                 console.log("quote: ", res[0].quote);
                 setQuote(res[0].quote);
             }
-            catch (error: any) {
+            catch (error: unknown) {
                 console.log(error)
             }
         }

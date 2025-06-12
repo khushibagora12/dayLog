@@ -3,6 +3,7 @@ import UserLog from "./db";
 import { ConnectDB } from "@/dbConnect/dbConnect";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth/[...nextauth]/route";
+import { getErrorMessage } from "@/lib/errorHandler";
 
 export async function POST(req: NextRequest) {
     const session = await getServerSession(authOptions)
@@ -32,9 +33,9 @@ export async function POST(req: NextRequest) {
         }
         return NextResponse.json({ message: "Log saved successfully" });
 
-    } catch (error: any) {
+    } catch (error: unknown) {
         console.log("in catch: ", error)
-        return NextResponse.json({ error: error.message }, { status: 500 })
+        return NextResponse.json({ error: getErrorMessage(error) }, { status: 500 })
 
     }
 }
@@ -49,7 +50,7 @@ export async function GET() {
         }
         return NextResponse.json(findUser);
     } 
-    catch (error : any) {
-        return NextResponse.json({error : error.message}, {status : 500})
+    catch (error : unknown) {
+        return NextResponse.json({error : getErrorMessage(error)}, {status : 500})
     }
 }

@@ -1,5 +1,5 @@
 'use client'
-import { ScrollText, Home, MessageSquareHeart, NotebookPen, UserPen, LogOut, Menu } from "lucide-react"
+import { ScrollText, Home, MessageSquareHeart, NotebookPen, UserPen, LogOut } from "lucide-react"
 import { fascinate } from "../ui/fonts"
 import {
     Sidebar as UISidebar,

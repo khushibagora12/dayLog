@@ -39,7 +39,7 @@ export default function Signup() {
             }
             setSubmit(false);
 
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.log(error);
         }
     }

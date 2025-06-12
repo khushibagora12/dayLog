@@ -36,7 +36,7 @@ export default function FeedbackPage() {
                 setRating(0);
                 setFeedback('');
             }
-        } catch (error : any) {
+        } catch (error : unknown) {
             console.log(error)
         }
     }

@@ -19,7 +19,7 @@ export default function ProfilePage() {
                 });
                 const user = await res.json();
                 setUserdetails({...userdetails, username : user.username, email : user.email});
-            } catch (error: any) {
+            } catch (error: unknown) {
                 console.log(error);
             }
         }
@@ -42,7 +42,7 @@ export default function ProfilePage() {
                     location.reload();
                 }, 3000);
             }
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.log(error)
         }
     }

@@ -61,7 +61,7 @@ export default function WriteLogPage() {
             else{
                 toast("failed")
             }
-        } catch (error: any) {
+        } catch (error: unknown) {
             console.log(error);
         }
     }
