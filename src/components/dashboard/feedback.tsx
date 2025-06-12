@@ -30,7 +30,7 @@ export default function FeedbackPage() {
                 },
                 body : JSON.stringify(data)
             })
-            const response = await res.json();
+            await res.json();
             if(res.ok){
                 toast("feedback sent");
                 setRating(0);

@@ -14,10 +14,10 @@ const authOptions: NextAuthOptions = {
                 password: { label: "Password", type: "password" }
             },
             async authorize(credentials) {
-                // if (!credentials?.email || !credentials.password) {
-                //     console.log("credentials not found")
-                //     return null;
-                // }
+                if (!credentials?.email || !credentials.password) {
+                    console.log("credentials not found")
+                    return null;
+                }
                 try {
                     await ConnectDB();
                     //find user

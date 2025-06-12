@@ -1,10 +1,9 @@
 'use client'
 
-import { cinzel, fascinate, plexSerif, poppins } from "../ui/fonts"
+import { fascinate, plexSerif, poppins } from "../ui/fonts"
 import Aboutus from "./aboutUs"
 import Features from "./features"
 import Navbar from "./navbar"
-import Image from "next/image"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-export async function GET(req : Request) {
+export async function GET() {
     try {
         const res = await fetch('https://api.api-ninjas.com/v1/quotes',{
             method : "GET", 

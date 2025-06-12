@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import { plexSerif, poppins, allura, ephesis } from "../ui/fonts";
+import { plexSerif, poppins, ephesis } from "../ui/fonts";
 import Link from "next/link";
 export default function Homepage() {
     const [username, setUsername] = useState('');

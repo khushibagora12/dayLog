@@ -1,4 +1,4 @@
-import { barriecito, niconne, plexSerif, poppins } from "../ui/fonts";
+import { plexSerif, poppins } from "../ui/fonts";
 
 export default function Features() {
     return (

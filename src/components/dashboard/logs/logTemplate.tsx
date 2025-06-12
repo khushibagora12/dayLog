@@ -2,12 +2,11 @@ import {
     Card,
     CardAction,
     CardContent,
-    CardDescription,
-    CardFooter,
+
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { niconne, oohBaby, parisienne, shantel } from "@/components/ui/fonts"
+import { niconne, shantel } from "@/components/ui/fonts"
 import Image from "next/image"
 
 export default function Template({userData} : any) {
