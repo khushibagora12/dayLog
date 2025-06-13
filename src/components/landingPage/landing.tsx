@@ -118,7 +118,7 @@ export default function Landing() {
                         stroke="#7516ac"
                         strokeWidth="0.15"
                         viewBox="0 0 24 24"
-                        className="absolute right-90 bottom-440"
+                        className="absolute right-85 bottom-440"
                     >
                         <path d="M12 2C12 7 7 12 2 12C7 12 12 17 12 22C12 17 17 12 22 12C17 12 12 7 12 2Z" />
                     </svg>
