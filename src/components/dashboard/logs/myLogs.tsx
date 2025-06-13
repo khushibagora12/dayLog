@@ -57,8 +57,8 @@ export default function MyLogsPage() {
                 <hr className="text-gray-400"/>
                 <div className=" mt-10 grid lg:grid-cols-2 gap-20">
                     {
-                        logs &&
-                        logs.map((log: Log, idx: number) => (
+                        logs?.filter((log : Log) => log.date === formatted)
+                        .map((log: Log, idx: number) => (
                             <div key={idx}>
                                 {log.date === formatted && <Template userData={log} />}
                             </div>
